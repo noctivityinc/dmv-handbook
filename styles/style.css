@@ -9,9 +9,6 @@ body {
   background-size: 100% auto;
 }
 
-/* .container-fluid {
-  max-width: 1280px;
-} */
 h1 {
   font-size: 58px;
   color: #2D3E51;
@@ -78,6 +75,7 @@ dd {
 
 .study-resources .study-resource-container {
   background: #FFFFFF;
+  min-width: 245px;
   /*border-radius: 3px;*/
   /*padding: 0px;*/
 }
@@ -155,7 +153,7 @@ dd {
   color: #2D3E51;
 }
 
-.footer .list-item a {
+.footer .list-item a, .footer .list-inline-item a {
   color: #fff;
 }
 
@@ -281,11 +279,6 @@ dd {
 .header .container-fluid {
   padding-top: 27px;
   padding-bottom: 27px;
-}
-
-.page-header {
-  margin-top: 83px;
-  margin-bottom: 32px;
 }
 
 .handbook-preview {
@@ -420,37 +413,7 @@ dd {
   max-width: 50vh;
 }
 
-@media (min-width: 1457px) {
-  .study-resources dd>br {
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1280px;
-  }
-}
-
-@media all and (max-width: 1024px) and (min-width: 768px) {
-  .dmv-purchase .col-md-9, .dmv-purchase .col-md-3 {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .pass-rate {
-    font-size: 100px;
-  }
-
-  .dmv-resources .col-md-4 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 767px)  {
   .pass-rate {
     text-align: left;
     font-size: 56px;
@@ -478,5 +441,32 @@ dd {
 
   .study-resources dd>br {
     display: none;
+  }  
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .dmv-purchase .col-md-9, .dmv-purchase .col-md-3 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .dmv-resources .col-md-4 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }  
+}
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  .pass-rate {
+    font-size: 42px;
   }
 }
+
+@media (min-width: 1200px) {
+  .study-resources dd>br {
+    display: none;
+  }
+}
+
