@@ -28,14 +28,16 @@ h3 {
 
 dt {
   font-size: 20px;
-  color: #2D3E51;
+  color: #767676;
   letter-spacing: 0.46px;
+  font-weight: normal;
 }
 
 dd {
   font-size: 20px;
-  color: #767676;
+  color: #2D3E51;
   letter-spacing: 0.42px;
+  font-weight: bold;
 }
 
 .dmv-facts dd {
@@ -63,21 +65,29 @@ dd {
   margin: 0 auto;
 }
 
-.study-resources .study-resource-container {
-  background: #FFFFFF;
-  box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 3px;
-  max-width: calc(33.333% - 20px);
-  padding: 28px;
+.card.no-header {
+  margin-top: 50px;
 }
 
-.study-resources .study-resource-container:first-child, .study-resources .study-resource-container:nth-child(2) {
-  margin-right: 30px;
+.card .card-header {
+  text-align: center;
+  background: #2EC877;
+  color: white;
+  font-weight: bold;
+}
+
+.study-resources .study-resource-container {
+  background: #FFFFFF;
+  /*border-radius: 3px;*/
+  /*padding: 0px;*/
+}
+
+.study-resources .study-resource-container:nth-child(2) {
+  box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
 .study-resources h4 {
   font-family: HelveticaNeue-Bold;
-  font-size: 26px;
   color: #2D3E51;
   letter-spacing: 0.5px;
   margin-bottom: 30px;
@@ -88,28 +98,30 @@ dd {
 }
 
 .pass-rate {
-  font-size: 80px;
+  font-size: 58px;
   color: #2D3E51;
   text-align: right;
   font-weight: bold;
   text-align: center;
 }
 
-.btn-primary::after {
+.purchase-cta::after {
   content: url(/styles/images/Arrow.svg);
   vertical-align: middle;
   margin-left: 8px;
 }
 
-.btn-outline-primary::after {
+.download-cta::after, .btn-outline-primary::after {
   content: url(/styles/images/download.svg);
   vertical-align: middle;
   margin-left: 8px;
 }
 
-.btn-primary {
-  border-color: #2EC877;
-  background-color: #2EC877;
+.download-cta::after {
+  content: url(/styles/images/download-gray.svg);
+}
+
+.btn-primary, .btn-secondary {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.20);
   border-radius: 3px;
   padding: 12px;
@@ -118,6 +130,11 @@ dd {
   color: #FFFFFF;
   letter-spacing: 1px;
   text-align: center;
+}
+
+.btn-primary {
+  border-color: #2EC877;
+  background-color: #2EC877;
 }
 
 .study-resources .btn-primary {
@@ -170,7 +187,7 @@ dd {
   list-style: none;
   font-family: HelveticaNeue;
 }
-
+/*
 .study-resources .study-resource-container:first-child::after, .study-resources .study-resource-container:nth-child(2)::after {
   content: 'VS';
   display: block;
@@ -187,7 +204,7 @@ dd {
   top: calc(50% - 15px);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.20);
 }
-
+*/
 .dmv-purchase {
   background: #FFFFFF;
   box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.12);
@@ -234,7 +251,7 @@ dd {
   content: ' ';
   width: 6px;
   height: 100%;
-  color: #1B8974;
+  background-color: #1B8974;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -246,14 +263,15 @@ dd {
 .footer {
   background-color: #2D3E51;
   color: #fff;
-  padding-top: 32px;
+  padding: 32px;
 }
 
 .disclaimer {
   font-size: 20px;
-  color: #ffffff85;
+  padding: 16px;
+  color: #fff;
   letter-spacing: 0.5px;
-  background-color: #2D3E51;
+  background-color: #57789d;
 }
 
 .header {
@@ -421,26 +439,8 @@ dd {
     margin: 0 auto;
   }
 
-  .study-resources .study-resource-container {
-    padding: 18px;
-    flex: 0 0 100%;
-  }
-
   .pass-rate {
     font-size: 100px;
-  }
-
-  .study-resources .study-resource-container:first-child, .study-resources .study-resource-container:nth-child(2) {
-    margin-right: unset;
-  }
-
-  .study-resources .study-resource-container {
-    max-width: unset;
-    margin: 8px auto;
-  }
-
-  .study-resources .study-resource-container:first-child::after, .study-resources .study-resource-container:nth-child(2)::after {
-    content: none;
   }
 
   .dmv-resources .col-md-4 {
@@ -451,20 +451,6 @@ dd {
 }
 
 @media (max-width: 767px) {
-  .study-resources .study-resource-container {
-    max-width: unset;
-    margin: 8px auto;
-    font-size: 40px;
-  }
-
-  .study-resources .study-resource-container:first-child, .study-resources .study-resource-container:nth-child(2) {
-    margin-right: unset;
-  }
-
-  .study-resources .study-resource-container:first-child::after, .study-resources .study-resource-container:nth-child(2)::after {
-    content: none;
-  }
-
   .pass-rate {
     text-align: left;
     font-size: 56px;
@@ -486,11 +472,11 @@ dd {
     max-width: 50%;
   }
 
-  .study-resources dd>br {
-    display: none;
+  .card.no-header {
+    margin-top: 0px;
   }
 
-  .study-resources .study-resource-container {
-    padding: 18px;
+  .study-resources dd>br {
+    display: none;
   }
 }
