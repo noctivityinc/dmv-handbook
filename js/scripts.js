@@ -5,6 +5,24 @@
   let pdfInstance = null;
   let totalPagesCount = 0;
 
+  var Anchors = document.getElementsByTagName("a");
+
+  for (var i = 0; i < Anchors.length ; i++) {
+      Anchors[i].addEventListener("click", 
+          function (e) {
+              console.log(e.target.href);
+
+       ga('send', 'event', {
+        eventCategory: 'Outbound Link',
+        eventAction: 'click',
+        eventLabel: e.target.href,
+        transport: 'beacon'
+      });
+          }, 
+          false);
+  }
+
+
   const viewport = document.querySelector("#viewport");
   window.initPDFViewer = function(pdfURL) {
     pdfjsLib.getDocument(pdfURL).then(pdf => {
