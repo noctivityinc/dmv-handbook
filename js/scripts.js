@@ -10,9 +10,10 @@
   for (var i = 0; i < Anchors.length ; i++) {
       Anchors[i].addEventListener("click", 
           function (e) {
+              console.log(e);
               console.log(e.target.href);
 
-       ga('send', 'event', {
+       gtag('send', 'event', {
         eventCategory: 'Outbound Link',
         eventAction: 'click',
         eventLabel: e.target.href,
