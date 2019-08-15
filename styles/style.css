@@ -172,9 +172,10 @@ dd {
   list-style-type: none;
 }
 
-.dmv-resources a::after, .footer .list-item a:after {
+.dmv-resources a::before, .footer .list-item a:before {
   content: ' >';
   color: #1B8974;
+  margin-right: 16px;
 }
 
 .operation-hours>ul>li {
