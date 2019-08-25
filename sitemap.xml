@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+  <url>
+    <loc>https://dmv-handbook.org</loc>
+    <lastmod>2019-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://dmv-handbook.org/california</loc>
+    <lastmod>2019-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://dmv-handbook.org/florida</loc>
+    <lastmod>2019-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://dmv-handbook.org/north-carolina</loc>
+    <lastmod>2019-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://dmv-handbook.org/new-york</loc>
+    <lastmod>2019-08-25</lastmod>
+  </url>
+  <url>
+    <loc>https://dmv-handbook.org/texas</loc>
+    <lastmod>2019-08-25</lastmod>
+  </url>
+</urlset>
